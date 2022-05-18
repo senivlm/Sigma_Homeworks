@@ -1,0 +1,5 @@
+C:\Users\Иван\source\repos\Sigma_hw_0_lib\obj\Debug\netstandard2.0\Sigma_hw0_lib.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Sigma_hw_0_lib\obj\Debug\netstandard2.0\Sigma_hw0_lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Sigma_hw_0_lib\obj\Debug\netstandard2.0\Sigma_hw0_lib.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Sigma_hw_0_lib\obj\Debug\netstandard2.0\Sigma_hw0_lib.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Sigma_hw_0_lib\obj\Debug\netstandard2.0\Sigma_hw0_lib.csproj.CoreCompileInputs.cache
