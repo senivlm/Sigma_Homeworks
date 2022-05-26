@@ -166,69 +166,69 @@ namespace VectorLibrary
 
         public void QuickSort()
         {
-            //_array = QuickSortArray_First(_array);
-            //_array = QuickSortArray_Last(_array);
-            _array = QuickSortArray_Middle(_array);
+            //_array = QuickSortArray_First(_array, Count);
+            //_array = QuickSortArray_Last(_array, Count);
+            _array = QuickSortArray_Middle(_array, Count);
         }
-        private T[] QuickSortArray_First(T[] array)
+        private T[] QuickSortArray_First(T[] array, int length)
         {
             T pivot = array[0];
             T[] less = new T[0];
             T[] greater = new T[0];
 
-            for (int i = 1; i < array.Length; i++)
+            for (int i = 1; i < length; i++)
             {
                 QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
             }
 
             if (less.Length > 1)
-                less = QuickSortArray_First(less);
+                less = QuickSortArray_First(less, less.Length);
             if (greater.Length > 1)
-                greater = QuickSortArray_First(greater);
+                greater = QuickSortArray_First(greater, greater.Length);
 
             // less + pivot + greater
             return QuickSort_Concat(less, pivot, greater);
         }
 
-        private T[] QuickSortArray_Last(T[] array)
+        private T[] QuickSortArray_Last(T[] array, int length)
         {
-            T pivot = array[array.Length-1];
+            T pivot = array[length-1];
             T[] less = new T[0];
             T[] greater = new T[0];
 
-            for (int i = array.Length-2; i >= 0; i--)
+            for (int i = length-2; i >= 0; i--)
             {
                 QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
             }
 
             if (less.Length > 1)
-                less = QuickSortArray_Last(less);
+                less = QuickSortArray_Last(less, less.Length);
             if (greater.Length > 1)
-                greater = QuickSortArray_Last(greater);
+                greater = QuickSortArray_Last(greater, greater.Length);
 
             // less + pivot + greater
             return QuickSort_Concat(less, pivot, greater);
         }
 
-        private T[] QuickSortArray_Middle(T[] array)
+        private T[] QuickSortArray_Middle(T[] array, int length)
         {
-            T pivot = array[array.Length/2];
+            T pivot = array[length/2];
             T[] less = new T[0];
             T[] greater = new T[0];
 
-            for (int i = 0; i < array.Length/2; i++)
+            for (int i = 0; i < length/2; i++)
             {
                 QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
             }
-            for (int i = array.Length / 2 + 1; i < array.Length; i++)
+            for (int i = length / 2 + 1; i < length; i++)
             {
                 QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
             }
 
             if (less.Length > 1)
-                less = QuickSortArray_Middle(less);
+                less = QuickSortArray_Middle(less, less.Length);
             if (greater.Length > 1)
-                greater = QuickSortArray_Middle(greater);
+                greater = QuickSortArray_Middle(greater, greater.Length);
 
             // less + pivot + greater
             return QuickSort_Concat(less, pivot, greater);
