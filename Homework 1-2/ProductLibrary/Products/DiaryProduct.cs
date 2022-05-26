@@ -21,6 +21,7 @@ namespace ProductLibrary.Products
             Price *= GetDiscount();
         }
 
+        // TODO const
         private decimal GetDiscount()
         {
             // 25%

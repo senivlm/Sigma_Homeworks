@@ -49,7 +49,7 @@ namespace Program {
 
         static void StorageDemo()
         {
-            Storage storage = new Storage() { Products = GetProducts() };
+            Storage storage = new Storage(GetProducts());
             storage.Print();
             List<Meat> meats = storage.GetAllMeat().ToList();
             storage.InitializeManually();

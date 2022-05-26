@@ -23,6 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\Sigma_hw_0_lib\\ProductLibrary.csproj",
       "ProductLibrary >= 1.0.0"
     ]
   },
@@ -32,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,11 +54,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ProductLibrary\\ProductLibrary.csproj": {
-              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ProductLibrary\\ProductLibrary.csproj"
+            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ProductLibrary\\ProductLibrary.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ProductLibrary\\ProductLibrary.csproj"
             },
-            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\Sigma_hw_0_lib\\ProductLibrary.csproj": {
-              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\Sigma_hw_0_lib\\ProductLibrary.csproj"
+            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\Sigma_hw_0_lib\\ProductLibrary.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\Sigma_hw_0_lib\\ProductLibrary.csproj"
             }
           }
         }
@@ -89,5 +90,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\Sigma_hw_0_lib\\ProductLibrary.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\Sigma_hw_0_lib\\ProductLibrary.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

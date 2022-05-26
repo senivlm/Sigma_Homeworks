@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ProductLibrary\\ProductLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ProductLibrary\\ProductLibrary.csproj",
       "projectName": "ProductLibrary",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ProductLibrary\\ProductLibrary.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ProductLibrary\\ProductLibrary.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 0\\ProductLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 1-2\\ProductLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",

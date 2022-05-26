@@ -7,28 +7,26 @@ namespace ProductLibrary
 {
     public class Storage
     {
-        public List<Product> Products { get; set; } = new List<Product>();
+        private List<Product> _products;
+        public List<Product> Products { get; }
 
-        public void Print()
+        public Storage()
         {
-            if(Products != null)
-            {
-                foreach (Product p in Products)
-                    Console.WriteLine(p.ToString() + "\n");
-            }
+            _products = new List<Product>();
+        }
+
+        public Storage(List<Product> products)
+        {
+            if(products != null)
+                _products = products;
         }
 
         public IEnumerable<Meat> GetAllMeat()
         {
             List<Meat> result = new List<Meat>();
 
-            foreach (var product in Products)
+            foreach (var product in _products)
             {
-                //Meat meat = product as Meat;
-
-                //if (meat != null)
-                //    result.Add(meat);
-
                 if(product is Meat meat)
                 {
                     result.Add(meat);
@@ -41,7 +39,7 @@ namespace ProductLibrary
         {
             if (percentage == 0) return;
 
-            foreach (var product in Products)
+            foreach (var product in _products)
             {
                 product.PercentagePrice(percentage);
             }
@@ -49,8 +47,8 @@ namespace ProductLibrary
 
         public Product this[int index]
         {
-            get { return Products[index]; }
-            set { Products[index] = value; }
+            get { return _products[index]; }
+            set { _products[index] = value; }
         }
         
     }

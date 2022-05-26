@@ -219,5 +219,14 @@ namespace ProductLibrary
 
             return result;
         }
+
+        public static void Print(this Storage storage)
+        {
+            if (storage.Products != null)
+            {
+                foreach (Product p in storage.Products)
+                    Console.WriteLine(p.ToString() + "\n");
+            }
+        }
     }
 }
