@@ -8,7 +8,7 @@ using VectorLibrary.Utils;
 namespace VectorLibrary
 {
     public class Vector<T> : IEnumerable<T> where T : IComparable<T>
-    {
+    {// чудовий варіант. нагадайте, щоб я дала Вам інше, ніж іншим завдання.
         private T[] _array;
 
         public int Count { get; set; }
@@ -163,7 +163,7 @@ namespace VectorLibrary
                 _array[n] = value;
             }
         }
-
+// можна передавати напрям сортування та вибір ведучого елемента, що зробить його більш гнучким для використання та дослідження
         public void QuickSort()
         {
             //_array = QuickSortArray_First(_array, Count);
