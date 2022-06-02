@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{6CF75C58-39AB-405E-83DE-7FF4CC9DE5EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VectorLibrary", "VectorLibrary\VectorLibrary.csproj", "{60B5AF28-370E-4CF3-9C6A-2EA2B8F5BAEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CF75C58-39AB-405E-83DE-7FF4CC9DE5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF75C58-39AB-405E-83DE-7FF4CC9DE5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF75C58-39AB-405E-83DE-7FF4CC9DE5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF75C58-39AB-405E-83DE-7FF4CC9DE5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60B5AF28-370E-4CF3-9C6A-2EA2B8F5BAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60B5AF28-370E-4CF3-9C6A-2EA2B8F5BAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60B5AF28-370E-4CF3-9C6A-2EA2B8F5BAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60B5AF28-370E-4CF3-9C6A-2EA2B8F5BAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82E85AA4-E9A0-4754-8E5B-D89ED75C1330}
+	EndGlobalSection
+EndGlobal
