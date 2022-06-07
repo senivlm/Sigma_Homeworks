@@ -189,7 +189,8 @@ namespace VectorLibrary
             // less + pivot + greater
             return QuickSort_Concat(less, pivot, greater);
         }
-
+// Найчастіше сортують вхідний параметр. А у нашому випадку поле. Крім тогокраще реалізовувати одинметод і передавати йому параметром індекс початкового опорного елемента.
+// а Вашу реалізацію треба б помістити в інший клас як статичний метод.
         private T[] QuickSortArray_Last(T[] array, int length)
         {
             T pivot = array[length-1];
