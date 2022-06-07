@@ -30,12 +30,22 @@ namespace EnergyAccounting
             // so on
 
             string[] firstLine = lines[0].Split(Config.FILE_SEPARATOR);
-            int numOfFlats = int.Parse(firstLine[0]);
-            
-            if(numOfFlats != lines.Count - 1)
+
+            int numOfFlats;
+            int quarter;
+            try
+            {
+                numOfFlats = int.Parse(firstLine[0]);
+                quarter = int.Parse(firstLine[1]);
+            }
+            catch (Exception)
+            {
+                throw new InvalidDataException("Couldn't parse data on line 1");
+            }
+
+            if (numOfFlats != lines.Count - 1)
                 throw new InvalidDataException("Difference between number of flats and number of lines");
 
-            int quarter = int.Parse(firstLine[1]);
             switch (quarter)
             {
                 case 1:
