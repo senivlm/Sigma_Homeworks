@@ -5,7 +5,7 @@ using System.Text;
 namespace VectorLibrary
 {
     public partial class Vector<T> : IEnumerable<T> where T : IComparable<T>
-    {
+    {//Побачили мої думки
         #region QuickSort
         public void QuickSort()
         {
@@ -118,6 +118,7 @@ namespace VectorLibrary
             for (int i = length - 1; i >= 0; i--)
             {
                 T temp = array[0];
+                
                 array[0] = array[i];
                 array[i] = temp;
                 length--;
