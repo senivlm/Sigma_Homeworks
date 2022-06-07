@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using static EnergyAccounting.TextProcessor;
 
 namespace EnergyAccounting
 {
@@ -32,6 +31,17 @@ namespace EnergyAccounting
         {
             FlatReports = flatReports;
             Quarter = quarter;
+        }
+        public void PrintToFile(string filePath)
+        {
+            // build string array for each line
+            var reportTable = TextProcessor.GetReportTable(this);
+
+            // write it into the file
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException(filePath);
+
+            File.WriteAllLines(filePath, reportTable);
         }
         public FlatReport GetBiggestBill()
         {

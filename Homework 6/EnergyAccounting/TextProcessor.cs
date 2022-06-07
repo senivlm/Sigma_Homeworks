@@ -7,7 +7,7 @@ using System.Text;
 
 namespace EnergyAccounting
 {
-    public static class TextProcessor
+    internal static class TextProcessor
     {
         private static string br = "|-------------------------------------------------------------------------------------------------------|";
         public static List<string> LoadFile(this string file)
@@ -33,7 +33,7 @@ namespace EnergyAccounting
             int numOfFlats = int.Parse(firstLine[0]);
             
             if(numOfFlats != lines.Count - 1)
-                throw new Exception("Difference between number of flats and number of lines");
+                throw new InvalidDataException("Difference between number of flats and number of lines");
 
             int quarter = int.Parse(firstLine[1]);
             switch (quarter)
@@ -55,9 +55,9 @@ namespace EnergyAccounting
                 string[] line = lines[i].Split(Config.FILE_SEPARATOR);
 
                 if(line.Length < 5 + Config.DATES_PER_QUARTER)
-                    throw new Exception($"Not enough data on line {i+1}");
+                    throw new InvalidDataException($"Not enough data on line {i+1}");
                 if (line.Length > 5 + Config.DATES_PER_QUARTER)
-                    throw new Exception($"Superfluous data on line {i+1}");
+                    throw new InvalidDataException($"Superfluous data on line {i+1}");
 
                 try
                 {
@@ -74,7 +74,7 @@ namespace EnergyAccounting
                 }
                 catch (Exception)
                 {
-                    throw new Exception($"Couldn't parse data on line {i+1}");
+                    throw new InvalidDataException($"Couldn't parse data on line {i+1}");
                 }
 
                 r.SetBills(Config.GrnPerKwt);
@@ -84,22 +84,7 @@ namespace EnergyAccounting
             return (flatReports, quarter);
         }
 
-        public static void PrintToFile(this Report report, string filePath)
-        {
-            if (report == null)
-                throw new ArgumentNullException();
-
-            // build string array for each line
-            var reportTable = GetReportTable(report);
-
-            // write it into the file
-            if (!File.Exists(filePath))
-                throw new FileNotFoundException(filePath);
-
-            File.WriteAllLines(filePath, reportTable);
-        }
-
-        private static List<string> GetReportTable(Report report)
+        public static List<string> GetReportTable(Report report)
         {
             List<string> result = new List<string>();
 
@@ -137,14 +122,13 @@ namespace EnergyAccounting
             }
 
             List<string> monthNames = GetMonths(firstMonth);
-            FormatMonths(monthNames);
 
             List<string> header = new List<string>();
 
             header.Add(br);
             header.Add($"| {TabSmall("#")}| {Tab("Прізвище")}| {TabBig(@"Знято \ Показник \ Сума")}| {Tab("Всього")} {Tab("")}|");
             header.Add($"| {TabSmall("")}| {Tab("")}|-------------------------------------------------------------------------------|");
-            header.Add($"| {TabSmall("")}| {Tab("")}| {monthNames[0]}| {monthNames[1]}| {monthNames[2]}| {Tab("kWt")}| {Tab("Грн")}|");
+            header.Add($"| {TabSmall("")}| {Tab("")}| {Tab(monthNames[0])}| {Tab(monthNames[1])}| {Tab(monthNames[2])}| {Tab("kWt")}| {Tab("Грн")}|");
             header.Add(br);
 
             return header;
@@ -152,7 +136,7 @@ namespace EnergyAccounting
 
         private static List<string> GetMonths(int firstMonth)
         {
-            CultureInfo temp = CultureInfo.CurrentCulture;
+            CultureInfo current = CultureInfo.CurrentCulture;
 
             TextInfo ukrTextInfo = new CultureInfo("uk-UA", false).TextInfo;
             CultureInfo.CurrentCulture = new CultureInfo("uk-UA", false);
@@ -163,17 +147,9 @@ namespace EnergyAccounting
                 monthNames.Add(ukrTextInfo.ToTitleCase(DateTimeFormatInfo.CurrentInfo.GetMonthName(i)));
             }
 
-            CultureInfo.CurrentCulture = temp;
+            CultureInfo.CurrentCulture = current;
 
             return monthNames;
-        }
-
-        private static void FormatMonths(List<string> monthNames)
-        {
-            for (int i = 0; i < monthNames.Count; i++)
-            {
-                monthNames[i] = Tab(monthNames[i]);
-            }
         }
 
         private static List<string> GetTableData(Report report)
@@ -206,7 +182,7 @@ namespace EnergyAccounting
 
         private static string TabSmall(string str)
         {
-            if (str.Length < 5)
+            if (str.Length < 6)
                 str += "\t";
 
             return str;
