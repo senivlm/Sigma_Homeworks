@@ -1,0 +1,20 @@
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\bin\Debug\netstandard2.1\ProductLibrary.deps.json
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\bin\Debug\netstandard2.1\ProductLibrary.dll
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\bin\Debug\netstandard2.1\ProductLibrary.pdb
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\obj\Debug\netstandard2.1\ProductLibrary.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\obj\Debug\netstandard2.1\ProductLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\obj\Debug\netstandard2.1\ProductLibrary.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\obj\Debug\netstandard2.1\ProductLibrary.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\obj\Debug\netstandard2.1\ProductLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\obj\Debug\netstandard2.1\ProductLibrary.dll
+C:\Users\Иван\source\repos\Sigma_homeworks\Sigma_hw_0_lib\obj\Debug\netstandard2.1\ProductLibrary.pdb
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\bin\Debug\netstandard2.1\ProductLibrary.deps.json
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\bin\Debug\netstandard2.1\ProductLibrary.dll
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\bin\Debug\netstandard2.1\ProductLibrary.pdb
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\obj\Debug\netstandard2.1\ProductLibrary.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\obj\Debug\netstandard2.1\ProductLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\obj\Debug\netstandard2.1\ProductLibrary.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\obj\Debug\netstandard2.1\ProductLibrary.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\obj\Debug\netstandard2.1\ProductLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\obj\Debug\netstandard2.1\ProductLibrary.dll
+C:\Users\Иван\source\repos\Homework 7\ProductLibrary\obj\Debug\netstandard2.1\ProductLibrary.pdb
