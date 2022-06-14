@@ -10,7 +10,7 @@ namespace ConsoleUI
     public class FileClass
     {
         public void ReadFile(StreamReader sr)
-        {
+        {//задача працюватиме тільки, якщо файл можна покласти в одну стрічку.
             string line = sr.ReadToEndAsync().Result;
             line = line.Replace("\r\n", "");
             line = line.Replace("  ", "");
@@ -70,6 +70,7 @@ namespace ConsoleUI
         public List<string> GetLongestWords(string sentence)
         {
             //sentence = Regex.Replace(sentence, "[^a-zA-Z0-9% ._]", string.Empty);
+            
             var punctuation = sentence.Where(Char.IsPunctuation).Distinct().ToArray();
             List<string> words = sentence.Split().Select(x => x.Trim(punctuation)).ToList();
             //string[] words = sentence.Split();
