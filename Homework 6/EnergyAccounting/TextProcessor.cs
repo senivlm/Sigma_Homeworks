@@ -10,6 +10,7 @@ namespace EnergyAccounting
     internal static class TextProcessor
     {
         private static string br = "|-------------------------------------------------------------------------------------------------------|";
+        //Прохання продемонструвати на занятті цей файл
         public static List<string> LoadFile(this string file)
         {
             if (!File.Exists(file))
