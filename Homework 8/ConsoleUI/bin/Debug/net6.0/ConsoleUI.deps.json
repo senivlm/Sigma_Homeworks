@@ -1,0 +1,58 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ConsoleUI/1.0.0": {
+        "dependencies": {
+          "EnergyAccounting": "1.0.0",
+          "ProductLibrary": "1.0.0",
+          "WebVisiting": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleUI.dll": {}
+        }
+      },
+      "EnergyAccounting/1.0.0": {
+        "runtime": {
+          "EnergyAccounting.dll": {}
+        }
+      },
+      "ProductLibrary/1.0.0": {
+        "runtime": {
+          "ProductLibrary.dll": {}
+        }
+      },
+      "WebVisiting/1.0.0": {
+        "runtime": {
+          "WebVisiting.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EnergyAccounting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebVisiting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

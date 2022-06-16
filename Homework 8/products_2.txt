@@ -1,0 +1,5 @@
+d, milk, 2.5, 1.56, 10.06.22
+m, pork, 234.4, 13.2, fIrSt, pork
+m, york, 234.4, 13.2, fIrSt, pork
+d, yogurt, 5.23, 23, 14.07.22
+m, bjork, 234.4, 13.2, fIrSt, pork

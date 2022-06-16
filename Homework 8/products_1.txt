@@ -1,0 +1,5 @@
+m, Chicken nuggets, 23.4, 50.2, fIrSt, cHicken
+d, milk, 2.5, 1.56, 10.06.22
+d, cheese, 1.4, 34, 11.04.22
+m, pork, 234.4, 13.2, fIrSt, pork
+d, yogurt, 5.23, 23, 14.07.22
