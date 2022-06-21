@@ -9,6 +9,7 @@ namespace EnergyAccounting
     public class Report : ICloneable
     {
         public byte Quarter { get; set; }
+        //порушення інкапсуляції. Можна уникнути, використовуючи реалізацію інтерфейсуIEnumarable
         public List<FlatReport> FlatReports { get; set; } = new List<FlatReport>();
         public Report()
         {
