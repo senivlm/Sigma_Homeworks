@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 
 namespace ProductLibrary
-{
+{// Добре проектування!
     /// <summary>
     /// Logs and retrieves lines that can't be serialized into Storage object 
     /// </summary>
