@@ -45,7 +45,7 @@ namespace EnergyAccounting
 
             if (numOfFlats != lines.Count - 1)
                 throw new InvalidDataException("Difference between number of flats and number of lines");
-
+//не зрозуміло ціль
             switch (quarter)
             {
                 case 1:
