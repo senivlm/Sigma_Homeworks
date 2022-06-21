@@ -33,6 +33,7 @@ namespace EnergyAccounting
             int hashFlatReportFlatNumber = obj.FlatNumber.GetHashCode();
 
             //Calculate the hash code for the product.
+            //не найкращий варіант
             return hashFlatReportLastName ^ hashFlatReportFlatNumber;
         }
     }
