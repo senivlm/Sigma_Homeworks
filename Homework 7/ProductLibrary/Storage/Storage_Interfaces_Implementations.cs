@@ -7,7 +7,7 @@ using System.Text;
 namespace ProductLibrary.Storage
 {
     public partial class Storage : IEnumerable<Product>, IList<Product>
-    {
+    {//продемонструвати на занятті застосування інтерфейсів
         #region IList
         public int Count => _products.Count;
 
