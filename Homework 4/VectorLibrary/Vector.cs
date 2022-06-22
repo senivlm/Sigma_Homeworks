@@ -7,52 +7,34 @@ using VectorLibrary.Utils;
 
 namespace VectorLibrary
 {
-    public class Vector<T> : IEnumerable<T> where T : IComparable<T>
+    public partial class Vector<T> : IEnumerable<T> where T : IComparable<T>
     {
-        private T[] _array;
+        private List<T> _array;
 
-        public int Count { get; set; }
-        public int Capacity { get; set; }
+        public int Count => _array.Count;
 
+        #region ctors
         public Vector()
         {
-            Capacity = 4;
-            _array = new T[Capacity];
+            _array = new List<T>();
         }
 
         public Vector(int capacity)
         {
-            Capacity = capacity;
-            _array = new T[capacity];
+            _array = new List<T>(capacity);
         }
+        #endregion
 
+        #region List
         public T this[int index]
         {
-            get
-            {
-                if (index < 0 || index >= Count)
-                    throw new ArgumentOutOfRangeException("index");
-
-                return _array[index];
-            }
-            set
-            {
-                if (index < 0 || index >= Count)
-                    throw new ArgumentOutOfRangeException("index");
-
-                _array[index] = value;
-            }
+            get => _array[index];
+            set => _array[index] = value;
         }
 
         public void Add(T item)
         {
-            if (Count >= Capacity)
-            {
-                Capacity *= 2;
-                Array.Resize(ref _array, Capacity);
-            }
-
-            _array[Count++] = item;
+            _array.Add(item);
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -64,8 +46,10 @@ namespace VectorLibrary
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
-        }
+        } 
+        #endregion
 
+        #region Methods
         public bool IsPalindrome()
         {
             if (Count % 2 != 0) return false;
@@ -80,7 +64,7 @@ namespace VectorLibrary
 
         public void Reverse()
         {
-            T[] result = new T[Capacity];
+            List<T> result = new List<T>(Count);
 
             for (int i = 0, j = Count - 1; j >= 0; i++, j--)
             {
@@ -133,7 +117,8 @@ namespace VectorLibrary
             }
 
             T[] result = new T[finalCount];
-            Array.Copy(_array, finalIndex, result, 0, finalCount);
+            
+            Array.Copy(_array.ToArray(), finalIndex, result, 0, finalCount);
 
             return result;
         }
@@ -162,103 +147,7 @@ namespace VectorLibrary
                 _array[k] = _array[n];
                 _array[n] = value;
             }
-        }
-
-        public void QuickSort()
-        {
-            //_array = QuickSortArray_First(_array, Count);
-            //_array = QuickSortArray_Last(_array, Count);
-            _array = QuickSortArray_Middle(_array, Count);
-        }
-        private T[] QuickSortArray_First(T[] array, int length)
-        {
-            T pivot = array[0];
-            T[] less = new T[0];
-            T[] greater = new T[0];
-
-            for (int i = 1; i < length; i++)
-            {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
-            }
-
-            if (less.Length > 1)
-                less = QuickSortArray_First(less, less.Length);
-            if (greater.Length > 1)
-                greater = QuickSortArray_First(greater, greater.Length);
-
-            // less + pivot + greater
-            return QuickSort_Concat(less, pivot, greater);
-        }
-
-        private T[] QuickSortArray_Last(T[] array, int length)
-        {
-            T pivot = array[length-1];
-            T[] less = new T[0];
-            T[] greater = new T[0];
-
-            for (int i = length-2; i >= 0; i--)
-            {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
-            }
-
-            if (less.Length > 1)
-                less = QuickSortArray_Last(less, less.Length);
-            if (greater.Length > 1)
-                greater = QuickSortArray_Last(greater, greater.Length);
-
-            // less + pivot + greater
-            return QuickSort_Concat(less, pivot, greater);
-        }
-
-        private T[] QuickSortArray_Middle(T[] array, int length)
-        {
-            T pivot = array[length/2];
-            T[] less = new T[0];
-            T[] greater = new T[0];
-
-            for (int i = 0; i < length/2; i++)
-            {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
-            }
-            for (int i = length / 2 + 1; i < length; i++)
-            {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
-            }
-
-            if (less.Length > 1)
-                less = QuickSortArray_Middle(less, less.Length);
-            if (greater.Length > 1)
-                greater = QuickSortArray_Middle(greater, greater.Length);
-
-            // less + pivot + greater
-            return QuickSort_Concat(less, pivot, greater);
-        }
-
-        private void QuickSort_Compare(ref T[] array, int i, ref T[] less, ref T[] greater, T pivot)
-        {
-            if (array[i].CompareTo(pivot) < 0) // array[i] < pivot
-            {
-                //less.Add(array[i]);
-                Array.Resize(ref less, less.Length + 1);
-                less[less.Length - 1] = array[i];
-            }
-            else if (array[i].CompareTo(pivot) >= 0) // array[i] >= pivot
-            {
-                //greater.Add(array[i]);
-                Array.Resize(ref greater, greater.Length + 1);
-                greater[greater.Length - 1] = array[i];
-            }
-        }
-
-        private T[] QuickSort_Concat(T[] less, T pivot, T[] greater)
-        {
-            // less + pivot + greater
-            var result = new T[less.Length + 1 + greater.Length];
-            less.CopyTo(result, 0);
-            result[less.Length] = pivot;
-            greater.CopyTo(result, less.Length + 1);
-
-            return result;
-        }
+        } 
+        #endregion
     }
 }

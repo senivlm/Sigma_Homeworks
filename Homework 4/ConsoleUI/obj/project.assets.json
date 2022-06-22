@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 4\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 4\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 4\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 4\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 4\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 4\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 4\\VectorLibrary\\VectorLibrary.csproj": {
-              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 4\\VectorLibrary\\VectorLibrary.csproj"
+            "C:\\Users\\Иван\\source\\repos\\Homework 4\\VectorLibrary\\VectorLibrary.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 4\\VectorLibrary\\VectorLibrary.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YEnuCWi0n3SO0q/Cg71rBnFel4yML6HdDNaUDL1zhepvj9/xDcGsTFekwfQMUNLW7I+aoVPcwYv5PYujtjKO8A==",
+  "dgSpecHash": "6gLdo3J27neaTQpStr5j07y4oivOn6vvOiVVX1Cdi1VIivccKXFv0S4Eofa7Q15OWvNyZJIUevfQ9SpgIrQ+HA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 4\\VectorLibrary\\VectorLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Иван\\source\\repos\\Homework 4\\VectorLibrary\\VectorLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Иван\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Иван\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
