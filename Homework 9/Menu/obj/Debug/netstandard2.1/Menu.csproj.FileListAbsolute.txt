@@ -1,0 +1,10 @@
+C:\Users\Иван\source\repos\Homework 9\Menu\bin\Debug\netstandard2.1\Menu.deps.json
+C:\Users\Иван\source\repos\Homework 9\Menu\bin\Debug\netstandard2.1\Menu.dll
+C:\Users\Иван\source\repos\Homework 9\Menu\bin\Debug\netstandard2.1\Menu.pdb
+C:\Users\Иван\source\repos\Homework 9\Menu\obj\Debug\netstandard2.1\Menu.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework 9\Menu\obj\Debug\netstandard2.1\Menu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Homework 9\Menu\obj\Debug\netstandard2.1\Menu.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Homework 9\Menu\obj\Debug\netstandard2.1\Menu.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Homework 9\Menu\obj\Debug\netstandard2.1\Menu.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework 9\Menu\obj\Debug\netstandard2.1\Menu.dll
+C:\Users\Иван\source\repos\Homework 9\Menu\obj\Debug\netstandard2.1\Menu.pdb

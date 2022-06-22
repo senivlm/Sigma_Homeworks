@@ -1,0 +1,13 @@
+Pancake
+salt, 5
+sugar, 20
+flour, 200
+egg, 100
+sunflower oil, 10
+milk, 250
+
+Omlette
+salt, 5
+egg, 200
+sunflower oil, 10
+

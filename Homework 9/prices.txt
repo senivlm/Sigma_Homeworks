@@ -1,0 +1,6 @@
+salt, 40
+//sugar, 40
+flour, 30
+egg, 30
+sunflower oil, 60
+milk, 30
