@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
       "projectName": "VectorLibrary",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",

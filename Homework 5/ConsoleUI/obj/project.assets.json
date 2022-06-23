@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "FileSort/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/FileSort.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FileSort.dll": {}
+        }
+      },
       "VectorLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "FileSort/1.0.0": {
+      "type": "project",
+      "path": "../FileSort/FileSort.csproj",
+      "msbuildProject": "../FileSort/FileSort.csproj"
+    },
     "VectorLibrary/1.0.0": {
       "type": "project",
       "path": "../VectorLibrary/VectorLibrary.csproj",
@@ -23,6 +38,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "FileSort >= 1.0.0",
       "VectorLibrary >= 1.0.0"
     ]
   },
@@ -32,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +69,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj": {
-              "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj"
+            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\FileSort.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\FileSort.csproj"
+            },
+            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\ConsoleUI.csproj": {}
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\ConsoleUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\ConsoleUI.csproj": {
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\ConsoleUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
+        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
         "projectName": "ConsoleUI",
-        "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
+        "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\ConsoleUI.csproj",
         "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\ConsoleUI\\obj\\",
+        "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\ConsoleUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj": {
-                "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj"
+              "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\FileSort.csproj": {
+                "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\FileSort.csproj"
+              },
+              "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj": {
+                "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj"
               }
             }
           }
@@ -62,14 +65,68 @@
         }
       }
     },
-    "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj": {
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\FileSort.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
-        "projectName": "VectorLibrary",
-        "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\FileSort.csproj",
+        "projectName": "FileSort",
+        "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\FileSort.csproj",
         "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 5\\VectorLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\FileSort\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
+        "projectName": "VectorLibrary",
+        "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\VectorLibrary.csproj",
+        "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework 5\\VectorLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",

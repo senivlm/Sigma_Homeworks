@@ -112,7 +112,7 @@ namespace VectorLibrary
 
             int max;
 
-            if(left < length && array[left].CompareTo(array[i]) > 0)
+            if (left < length && array[left].CompareTo(array[i]) > 0)
             {
                 max = left;
             }
@@ -121,12 +121,12 @@ namespace VectorLibrary
                 max = i;
             }
 
-            if(right < length && array[right].CompareTo(array[max]) > 0)
+            if (right < length && array[right].CompareTo(array[max]) > 0)
             {
                 max = right;
             }
 
-            if(max != i)
+            if (max != i)
             {
                 // Swap
                 (array[i], array[max]) = (array[max], array[i]);

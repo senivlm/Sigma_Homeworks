@@ -38,3 +38,13 @@ C:\Users\Иван\source\repos\Homework 5\VectorLibrary\obj\Debug\netstandard2.0
 C:\Users\Иван\source\repos\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Иван\source\repos\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.dll
 C:\Users\Иван\source\repos\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.pdb
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\bin\Debug\netstandard2.0\VectorLibrary.deps.json
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\bin\Debug\netstandard2.0\VectorLibrary.dll
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\bin\Debug\netstandard2.0\VectorLibrary.pdb
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.dll
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\VectorLibrary\obj\Debug\netstandard2.0\VectorLibrary.pdb

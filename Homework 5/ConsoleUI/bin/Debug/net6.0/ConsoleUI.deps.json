@@ -8,10 +8,16 @@
     ".NETCoreApp,Version=v6.0": {
       "ConsoleUI/1.0.0": {
         "dependencies": {
+          "FileSort": "1.0.0",
           "VectorLibrary": "1.0.0"
         },
         "runtime": {
           "ConsoleUI.dll": {}
+        }
+      },
+      "FileSort/1.0.0": {
+        "runtime": {
+          "FileSort.dll": {}
         }
       },
       "VectorLibrary/1.0.0": {
@@ -23,6 +29,11 @@
   },
   "libraries": {
     "ConsoleUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FileSort/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

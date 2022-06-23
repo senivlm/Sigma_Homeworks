@@ -1,6 +1,7 @@
 ﻿using System;
 using VectorLibrary;
 using VectorLibrary.Utils;
+using FileSort;
 
 namespace ConsoleUI 
 {
@@ -13,11 +14,9 @@ namespace ConsoleUI
             vector.PyramidSort();
             vector.Print();
 
-            // this doesn't work 
-            FileSorter sorter = new FileSorter();
-            sorter.SortFile(@"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\10.txt", ',');
+            string sortfile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 5\10.txt";
+            FileSorter.SortFile(sortfile, 2, ',');
         }
-
 
     }
 }
