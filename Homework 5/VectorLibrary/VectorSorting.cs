@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace VectorLibrary
@@ -7,101 +8,70 @@ namespace VectorLibrary
     public partial class Vector<T> : IEnumerable<T> where T : IComparable<T>
     {
         #region QuickSort
-        public void QuickSort()
+        public void QuickSort(QuickSortPivot pivot)
         {
-            //_array = QuickSortArray_First(_array, Count);
-            //_array = QuickSortArray_Last(_array, Count);
-            _array = QuickSortArray_Middle(_array, Count);
-            //QuickSortArray(_array, 0, Count-1);
-        }
-        private T[] QuickSortArray_First(T[] array, int length)
-        {
-            T pivot = array[0];
-            T[] less = new T[0];
-            T[] greater = new T[0];
-
-            for (int i = 1; i < length; i++)
+            switch (pivot)
             {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
+                case QuickSortPivot.First:
+                    _array = QuickSort(_array, Count, x => x - x);
+                    break;
+                case QuickSortPivot.Last:
+                    _array = QuickSort(_array, Count, x => x - 1);
+                    break;
+                case QuickSortPivot.Middle:
+                    _array = QuickSort(_array, Count, x => x / 2);
+                    break;
+            }
+        }
+
+        public void QuickSort(Func<int, int> pivotPredicate)
+        {
+            QuickSort(_array, Count, pivotPredicate);
+        }
+
+        private List<T> QuickSort(List<T> array, int length, Func<int, int> pivotPredicate)
+        {
+            int pivotIndex = pivotPredicate(length);
+            T pivot = array[pivotIndex];
+            var less = new List<T>();
+            var greater = new List<T>();
+
+            for (int i = 0; i < pivotIndex; i++)
+            {
+                Compare(array, i, less, greater, pivot);
+            }
+            for (int i = pivotIndex + 1; i < length; i++)
+            {
+                Compare(array, i, less, greater, pivot);
             }
 
-            if (less.Length > 1)
-                less = QuickSortArray_First(less, less.Length);
-            if (greater.Length > 1)
-                greater = QuickSortArray_First(greater, greater.Length);
+            if (less.Count > 1)
+                less = QuickSort(less, less.Count, pivotPredicate);
+            if (greater.Count > 1)
+                greater = QuickSort(greater, greater.Count, pivotPredicate);
 
             // less + pivot + greater
-            return QuickSort_Concat(less, pivot, greater);
+            return Concat(less, pivot, greater);
         }
-
-        private T[] QuickSortArray_Last(T[] array, int length)
-        {
-            T pivot = array[length - 1];
-            T[] less = new T[0];
-            T[] greater = new T[0];
-
-            for (int i = length - 2; i >= 0; i--)
-            {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
-            }
-
-            if (less.Length > 1)
-                less = QuickSortArray_Last(less, less.Length);
-            if (greater.Length > 1)
-                greater = QuickSortArray_Last(greater, greater.Length);
-
-            // less + pivot + greater
-            return QuickSort_Concat(less, pivot, greater);
-        }
-
-        private T[] QuickSortArray_Middle(T[] array, int length)
-        {
-            T pivot = array[length / 2];
-            T[] less = new T[0];
-            T[] greater = new T[0];
-
-            for (int i = 0; i < length / 2; i++)
-            {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
-            }
-            for (int i = length / 2 + 1; i < length; i++)
-            {
-                QuickSort_Compare(ref array, i, ref less, ref greater, pivot);
-            }
-
-            if (less.Length > 1)
-                less = QuickSortArray_Middle(less, less.Length);
-            if (greater.Length > 1)
-                greater = QuickSortArray_Middle(greater, greater.Length);
-
-            // less + pivot + greater
-            return QuickSort_Concat(less, pivot, greater);
-        }
-
-        private void QuickSort_Compare(ref T[] array, int i, ref T[] less, ref T[] greater, T pivot)
+        private void Compare(List<T> array, int i, List<T> less, List<T> greater, T pivot)
         {
             if (array[i].CompareTo(pivot) < 0) // array[i] < pivot
             {
-                //less.Add(array[i]);
-                Array.Resize(ref less, less.Length + 1);
-                less[less.Length - 1] = array[i];
+                less.Add(array[i]);
             }
-            else // array[i] >= pivot
+            else if (array[i].CompareTo(pivot) >= 0) // array[i] >= pivot
             {
-                //greater.Add(array[i]);
-                Array.Resize(ref greater, greater.Length + 1);
-                greater[greater.Length - 1] = array[i];
+                greater.Add(array[i]);
             }
         }
 
-        private T[] QuickSort_Concat(T[] less, T pivot, T[] greater)
+        private List<T> Concat(List<T> less, T pivot, List<T> greater)
         {
             // less + pivot + greater
-            var result = new T[less.Length + 1 + greater.Length];
-            less.CopyTo(result, 0);
-            result[less.Length] = pivot;
-            greater.CopyTo(result, less.Length + 1);
-
+            List<T> result = new List<T>();
+            result.AddRange(less);
+            result.Add(pivot);
+            result.AddRange(greater);
             return result;
         }
         #endregion
@@ -109,31 +79,33 @@ namespace VectorLibrary
         #region PyramidSort
         public void PyramidSort()
         {
-            PyramidSortArray(_array, Count);
+            PyramidSort(_array);
         }
 
-        private void PyramidSortArray(T[] array, int length)
+        private void PyramidSort(List<T> array)
         {
-            BuildMaxHeap(array, length);
-            for (int i = length - 1; i >= 0; i--)
+            BuildMaxHeap(array);
+            int length = array.Count;
+
+            for (int i = array.Count - 1; i >= 0; i--)
             {
-                T temp = array[0];
-                array[0] = array[i];
-                array[i] = temp;
+                // swap
+                (array[0], array[i]) = (array[i], array[0]);
+
                 length--;
                 Heapify_2(array, 0, length);
             }
         }
 
-        private void BuildMaxHeap(T[] array, int length)
+        private void BuildMaxHeap(List<T> array)
         {
-            for (int i = length / 2 - 1; i >= 0; i--)
+            for (int i = array.Count / 2 - 1; i >= 0; i--)
             {
-                Heapify(array, i, length);
+                Heapify(array, i, array.Count);
             }
         }
 
-        private void Heapify(T[] array, int i, int length)
+        private void Heapify(List<T> array, int i, int length)
         {
             int left = 2 * i + 1;
             int right = 2 * i + 2;
@@ -156,14 +128,13 @@ namespace VectorLibrary
 
             if(max != i)
             {
-                T temp = array[i];
-                array[i] = array[max];
-                array[max] = temp;
+                // Swap
+                (array[i], array[max]) = (array[max], array[i]);
                 Heapify(array, max, length);
             }
         }
 
-        private void Heapify_2(T[] array, int i, int length)
+        private void Heapify_2(List<T> array, int i, int length)
         {
             int left = i + 1;
             int right = i + 2;
@@ -186,79 +157,11 @@ namespace VectorLibrary
 
             if (max != i)
             {
-                T temp = array[i];
-                array[i] = array[max];
-                array[max] = temp;
+                // Swap 
+                (array[i], array[max]) = (array[max], array[i]);
                 Heapify(array, max, length);
             }
         }
         #endregion
-
-        #region MergeSort
-        
-        public void MergeSort()
-        {
-            MergeSortArray(_array, Count);
-        }
-
-        private void MergeSortArray(T[] array, int length)
-        {
-            if (length == 1) return;
-
-            // divide the array in two
-            int middle = length / 2;
-            T[] leftArray = new T[middle];
-            T[] rightArray = new T[length - middle];
-
-            Array.Copy(array, 0, leftArray, 0, middle);
-            Array.Copy(array, middle, rightArray, 0, length - middle);
-
-            MergeSortArray(leftArray, leftArray.Length);
-            MergeSortArray(rightArray, rightArray.Length);
-            Merge(leftArray, rightArray, array);
-        }
-
-        private void Merge(T[] leftArray, T[] rightArray, T[] array)
-        {
-            int i = 0; // main array index
-            int l = 0; // left array index
-            int r = 0; // right array index
-
-            while(l < leftArray.Length && r < rightArray.Length)
-            {
-                if(leftArray[l].CompareTo(rightArray[r]) < 0) // leftArray[l] < rightArray[r]
-                {
-                    array[i] = leftArray[l];
-                    i++;
-                    l++;
-                }
-                else // leftArray[l] >= rightArray[r]
-                {
-                    array[i] = rightArray[r];
-                    i++;
-                    r++;
-                }
-            }
-            while(l < leftArray.Length)
-            {
-                array[i] = leftArray[l];
-                i++;
-                l++;
-            }
-            while(r < rightArray.Length)
-            {
-                array[i] = rightArray[r];
-                i++;
-                r++;
-            }
-        }
-        #endregion
-
-        private void Swap(ref T a, ref T b)
-        {
-            T temp = a;
-            a = b; 
-            b = temp;
-        }
     }
 }

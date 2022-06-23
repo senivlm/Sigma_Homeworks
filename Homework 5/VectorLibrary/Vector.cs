@@ -9,50 +9,32 @@ namespace VectorLibrary
 {
     public partial class Vector<T> : IEnumerable<T> where T : IComparable<T>
     {
-        private T[] _array;
+        private List<T> _array;
 
-        public int Count { get; set; }
-        public int Capacity { get; set; }
+        public int Count => _array.Count;
 
+        #region ctors
         public Vector()
         {
-            Capacity = 4;
-            _array = new T[Capacity];
+            _array = new List<T>();
         }
 
         public Vector(int capacity)
         {
-            Capacity = capacity;
-            _array = new T[capacity];
+            _array = new List<T>(capacity);
         }
+        #endregion
 
+        #region List
         public T this[int index]
         {
-            get
-            {
-                if (index < 0 || index >= Count)
-                    throw new ArgumentOutOfRangeException("index");
-
-                return _array[index];
-            }
-            set
-            {
-                if (index < 0 || index >= Count)
-                    throw new ArgumentOutOfRangeException("index");
-
-                _array[index] = value;
-            }
+            get => _array[index];
+            set => _array[index] = value;
         }
 
         public void Add(T item)
         {
-            if (Count >= Capacity)
-            {
-                Capacity *= 2;
-                Array.Resize(ref _array, Capacity);
-            }
-
-            _array[Count++] = item;
+            _array.Add(item);
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -65,7 +47,9 @@ namespace VectorLibrary
         {
             return GetEnumerator();
         }
+        #endregion
 
+        #region Methods
         public bool IsPalindrome()
         {
             if (Count % 2 != 0) return false;
@@ -80,7 +64,7 @@ namespace VectorLibrary
 
         public void Reverse()
         {
-            T[] result = new T[Capacity];
+            List<T> result = new List<T>(Count);
 
             for (int i = 0, j = Count - 1; j >= 0; i++, j--)
             {
@@ -133,7 +117,8 @@ namespace VectorLibrary
             }
 
             T[] result = new T[finalCount];
-            Array.Copy(_array, finalIndex, result, 0, finalCount);
+
+            Array.Copy(_array.ToArray(), finalIndex, result, 0, finalCount);
 
             return result;
         }
@@ -163,5 +148,6 @@ namespace VectorLibrary
                 _array[n] = value;
             }
         }
+        #endregion
     }
 }
