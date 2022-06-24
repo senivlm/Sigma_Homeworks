@@ -1,0 +1,10 @@
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\bin\Debug\netstandard2.0\MatrixLib.deps.json
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\bin\Debug\netstandard2.0\MatrixLib.dll
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\bin\Debug\netstandard2.0\MatrixLib.pdb
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\obj\Debug\netstandard2.0\MatrixLib.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\obj\Debug\netstandard2.0\MatrixLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\obj\Debug\netstandard2.0\MatrixLib.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\obj\Debug\netstandard2.0\MatrixLib.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\obj\Debug\netstandard2.0\MatrixLib.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\obj\Debug\netstandard2.0\MatrixLib.dll
+C:\Users\Иван\source\repos\Homework 10\MatrixLib\obj\Debug\netstandard2.0\MatrixLib.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jiqIn8M3r4avwD0dr82Hyc6rFwSWBChGRxI8UwJovvZUPFpM9fB+FWKpVwglF/L36/nsjzVjL+RXjOwJtcqzCA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Иван\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Иван\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
