@@ -4,7 +4,7 @@ using System;
 namespace ConsoleUI
 {
     internal class Program
-    {
+    {//Не знайшла задачі зі словником
         static void Main(string[] args)
         {
             #region Task 2
