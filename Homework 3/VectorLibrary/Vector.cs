@@ -1,56 +1,39 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace VectorLibrary
 {
-    public class Vector<T> : IEnumerable<T>
+    public class Vector<T> : IEnumerable<T> 
     {
-        private T[] _array;
+        private List<T> _array;
 
-        public int Count { get; set; }
-        public int Capacity { get; set; }
+        public int Count => _array.Count;
 
+        #region ctors
         public Vector()
         {
-            Capacity = 4;
-            _array = new T[Capacity];
+            _array = new List<T>();
         }
 
-        public Vector(int capacity) 
+        public Vector(int capacity)
         {
-            Capacity = capacity;
-            _array = new T[capacity];
+            _array = new List<T>(capacity);
         }
+        #endregion
 
+        #region List
         public T this[int index]
         {
-            get 
-            {
-                if(index < 0 || index >= Count)
-                   throw new ArgumentOutOfRangeException("index");
-
-                return _array[index];
-            }
-            set 
-            {
-                if (index < 0 || index >= Count)
-                    throw new ArgumentOutOfRangeException("index");
-
-                _array[index] = value;
-            }
+            get => _array[index];
+            set => _array[index] = value;
         }
 
         public void Add(T item)
         {
-            if (Capacity == Count)
-            {
-                Capacity *= 2;
-                Array.Resize(ref _array, Capacity);
-            }
-
-            _array[Count++] = item;
+            _array.Add(item);
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -63,14 +46,16 @@ namespace VectorLibrary
         {
             return GetEnumerator();
         }
+        #endregion
 
+        #region Methods
         public bool IsPalindrome()
         {
             if (Count % 2 != 0) return false;
-            
-            for (int i = 0, j = Count -1 ; i < Count / 2; i++, j--)
+
+            for (int i = 0, j = Count - 1; i < Count / 2; i++, j--)
             {
-                if( ! _array[i].Equals(_array[j]))
+                if (!_array[i].Equals(_array[j]))
                     return false;
             }
             return true;
@@ -78,14 +63,10 @@ namespace VectorLibrary
 
         public void Reverse()
         {
-            T[] result = new T[Capacity];
-
             for (int i = 0, j = Count - 1; j >= 0; i++, j--)
             {
-                result[i] = _array[j];
+                (_array[i], _array[j]) = (_array[j], _array[i]);
             }
-
-            _array = result;
         }
 
         public IEnumerable<T> GetLongestSequence()
@@ -97,7 +78,7 @@ namespace VectorLibrary
             int count = 0;
             bool indexIsSet = false;
 
-            for (int i = 0; i < Count-1; i++)
+            for (int i = 0; i < Count - 1; i++)
             {
                 // if the next element has the same value
                 if (_array[i].Equals(_array[i + 1]))
@@ -116,7 +97,7 @@ namespace VectorLibrary
                     }
                 }
                 // check if the sequence is longer
-                else if(count > finalCount)
+                else if (count > finalCount)
                 {
                     finalIndex = index;
                     finalCount = count;
@@ -131,16 +112,17 @@ namespace VectorLibrary
             }
 
             T[] result = new T[finalCount];
-            Array.Copy(_array, finalIndex, result, 0, finalCount);
+
+            Array.Copy(_array.ToArray(), finalIndex, result, 0, finalCount);
 
             return result;
         }
 
-        public static Vector<int> InitShuffle(int maxNum) 
+        public static Vector<int> InitShuffle(int maxNum)
         {
             Vector<int> result = new Vector<int>(maxNum);
 
-            for (int i = 1; i < maxNum+1; i++)
+            for (int i = 1; i < maxNum + 1; i++)
                 result.Add(i);
 
             result.Shuffle();
@@ -152,7 +134,7 @@ namespace VectorLibrary
         {
             Random r = new Random();
             int n = Count;
-            while(n > 1)
+            while (n > 1)
             {
                 n--;
                 int k = r.Next(n + 1);
@@ -161,5 +143,6 @@ namespace VectorLibrary
                 _array[n] = value;
             }
         }
+        #endregion
     }
 }

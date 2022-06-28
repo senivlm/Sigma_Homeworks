@@ -39,7 +39,6 @@ namespace VectorLibrary
 
             return result;
         }
-
         public static int[,] CoolMatrix_2(int n)
         {
             if (n <= 0) return new int[0, 0];
@@ -55,7 +54,6 @@ namespace VectorLibrary
             }
             return result;
         }
-
         public static int[,] CoolMatrix_2(int n, WayOfOutput wayOfOutput)
         {
             if (n <= 0) return new int[0, 0];
