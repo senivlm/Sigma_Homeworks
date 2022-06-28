@@ -2,7 +2,7 @@
 using System;
 
 namespace ConsoleUI
-{
+{// Не знайшла задачі зі словником
     internal class Program
     {
         static void Main(string[] args)
