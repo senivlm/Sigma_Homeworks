@@ -26,7 +26,7 @@ namespace MatrixLib
             set => _matrix[i,j] = value;
         }
         public IEnumerator<T> GetEnumerator()
-        {
+        {// Покажіть цю ідею в групі
             switch (Pattern)
             {
                 case ForEachPattern.Horizontal:
