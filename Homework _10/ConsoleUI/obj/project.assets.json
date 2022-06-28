@@ -11,6 +11,16 @@
         "runtime": {
           "bin/placeholder/MatrixLib.dll": {}
         }
+      },
+      "TranslatorLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/TranslatorLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TranslatorLib.dll": {}
+        }
       }
     }
   },
@@ -19,11 +29,17 @@
       "type": "project",
       "path": "../MatrixLib/MatrixLib.csproj",
       "msbuildProject": "../MatrixLib/MatrixLib.csproj"
+    },
+    "TranslatorLib/1.0.0": {
+      "type": "project",
+      "path": "../Translator/TranslatorLib.csproj",
+      "msbuildProject": "../Translator/TranslatorLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "MatrixLib >= 1.0.0"
+      "MatrixLib >= 1.0.0",
+      "TranslatorLib >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -32,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +69,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj": {
-              "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj"
+            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\MatrixLib.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\MatrixLib.csproj"
+            },
+            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\TranslatorLib.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\TranslatorLib.csproj"
             }
           }
         }

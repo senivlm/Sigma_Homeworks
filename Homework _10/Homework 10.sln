@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{C430768C-3BEC-49C7-87F8-EEABA4B3FB53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{C430768C-3BEC-49C7-87F8-EEABA4B3FB53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixLib", "MatrixLib\MatrixLib.csproj", "{BB045DEE-1CBD-46C3-9247-AA035EAA19DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixLib", "MatrixLib\MatrixLib.csproj", "{BB045DEE-1CBD-46C3-9247-AA035EAA19DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslatorLib", "Translator\TranslatorLib.csproj", "{29D39916-8A16-435F-AB8F-B9524D8B60CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BB045DEE-1CBD-46C3-9247-AA035EAA19DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB045DEE-1CBD-46C3-9247-AA035EAA19DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB045DEE-1CBD-46C3-9247-AA035EAA19DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D39916-8A16-435F-AB8F-B9524D8B60CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D39916-8A16-435F-AB8F-B9524D8B60CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D39916-8A16-435F-AB8F-B9524D8B60CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D39916-8A16-435F-AB8F-B9524D8B60CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

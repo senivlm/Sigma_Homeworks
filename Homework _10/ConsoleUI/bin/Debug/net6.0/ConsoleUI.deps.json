@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "ConsoleUI/1.0.0": {
         "dependencies": {
-          "MatrixLib": "1.0.0"
+          "MatrixLib": "1.0.0",
+          "TranslatorLib": "1.0.0"
         },
         "runtime": {
           "ConsoleUI.dll": {}
@@ -17,6 +18,11 @@
       "MatrixLib/1.0.0": {
         "runtime": {
           "MatrixLib.dll": {}
+        }
+      },
+      "TranslatorLib/1.0.0": {
+        "runtime": {
+          "TranslatorLib.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "MatrixLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TranslatorLib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\ConsoleUI.csproj": {}
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\ConsoleUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\ConsoleUI.csproj": {
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\ConsoleUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\ConsoleUI.csproj",
+        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\ConsoleUI.csproj",
         "projectName": "ConsoleUI",
-        "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\ConsoleUI.csproj",
+        "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\ConsoleUI.csproj",
         "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\ConsoleUI\\obj\\",
+        "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\ConsoleUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj": {
-                "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj"
+              "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\MatrixLib.csproj": {
+                "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\MatrixLib.csproj"
+              },
+              "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\TranslatorLib.csproj": {
+                "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\TranslatorLib.csproj"
               }
             }
           }
@@ -62,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj": {
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\MatrixLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj",
+        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\MatrixLib.csproj",
         "projectName": "MatrixLib",
-        "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\MatrixLib.csproj",
+        "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\MatrixLib.csproj",
         "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework 10\\MatrixLib\\obj\\",
+        "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\MatrixLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -115,6 +118,60 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\TranslatorLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\TranslatorLib.csproj",
+        "projectName": "TranslatorLib",
+        "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\TranslatorLib.csproj",
+        "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _10\\Translator\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
