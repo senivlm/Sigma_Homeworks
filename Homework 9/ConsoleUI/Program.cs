@@ -7,7 +7,7 @@ using System.Collections;
 using System.Globalization;
 
 namespace ConsoleUI
-{
+{//кінцевий файл результату мав також містити кількість кожного інградієнту,яку потрібно сумарно купити.
     internal class Program
     {
         private readonly static string _menuFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework 9\menu.txt";
