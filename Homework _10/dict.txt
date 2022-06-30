@@ -1,9 +1,9 @@
-Hello-Привіт
 my-моє
 name-ім'я
 is-є
-Mark-Марк
-I-Я
+Hello-прив?т
+Mark-марк
+I-я
 go-хожу
 to-у
-school-школу
+school-пва

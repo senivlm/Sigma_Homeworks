@@ -37,5 +37,20 @@ namespace TranslatorLib
         }
     }
 
+    public class NoMoreInputLeftException : Exception
+    {
+        public NoMoreInputLeftException() : base()
+        {
 
+        }
+
+        public NoMoreInputLeftException(string message) : base(message)
+        {
+        }
+
+        public NoMoreInputLeftException(string message, Exception innerException) : base(message, innerException)
+        {
+
+        }
+    }
 }

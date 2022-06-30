@@ -12,8 +12,8 @@ namespace ConsoleUI
             #region Task 1
             string textFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _10\text.txt";
             string dictFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _10\dict.txt";
-            Dictionary<string, string> dictionary = new Dictionary<string, string>();
             List<string> text;
+            List<string> translated = new List<string>();
             try
             {
                 text = Utils.GetText(textFile);
@@ -24,7 +24,7 @@ namespace ConsoleUI
                 if (!translator.Dictionary.IsEmpty())
                 {
                     translator.OnTranslationAbsence += Translator_OnTranslationAbsence;
-                    var translated = translator.Translate(text, 2);
+                    translated = translator.Translate(text, 2);
 
                     Console.Clear();
                     foreach (var line in translated)
@@ -32,6 +32,18 @@ namespace ConsoleUI
                         Console.WriteLine(line);
                     }
                 }
+
+                Console.WriteLine();
+            }
+            catch (NoMoreInputLeftException ex)
+            {
+                Console.Clear();
+                ConsoleColor color = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Red;
+
+                Console.WriteLine("Goodbye \n");
+
+                Console.ForegroundColor = color;
 
                 Console.WriteLine();
             }
@@ -100,14 +112,8 @@ namespace ConsoleUI
             
             if(e.InputsLeft == 1)
             {
-                Console.Clear();
-                ConsoleColor color = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.Red;
-
-                Console.WriteLine("Goodbye \n");
-
-                Console.ForegroundColor = color;
-                return;
+                
+                throw new NoMoreInputLeftException();
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace TranslatorLib
@@ -27,11 +28,15 @@ namespace TranslatorLib
             if(Dictionary.IsEmpty())
                 throw new DictionaryIsEmptyException();
 
+            // копія тексту, що прийшов
             List<string> resultLines = new List<string>(lines);
             var words = new List<string>();
 
-            for(int i = 0; i < resultLines.Count; i++)
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+
+            for (int i = 0; i < resultLines.Count && inputsNum != 0; i++)
             {
+                words.Clear();
                 string[] split = resultLines[i].Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 foreach (string word in split)
                 {
@@ -44,6 +49,8 @@ namespace TranslatorLib
                     if (inputsNum == 0)
                         break;
 
+                    bool isUpper = Char.IsUpper(word[0]);
+
                     int count = 0;
                     if (Char.IsPunctuation(word[word.Length - 1]))
                     {
@@ -52,7 +59,10 @@ namespace TranslatorLib
                             OnTranslationAbsence(this.Dictionary, new TranslationAbsenceEventArgs(word[0..^1], inputsNum--));
                             count++;
                         }
-                        resultLines[i] = resultLines[i].Replace(word[0..^1], Dictionary[word[0..^1]]);
+                        if(isUpper)
+                            resultLines[i] = resultLines[i].Replace(word[0..^1], textInfo.ToTitleCase(Dictionary[word[0..^1]]));
+                        else 
+                            resultLines[i] = resultLines[i].Replace(word[0..^1], Dictionary[word[0..^1]]);
                     }
                     else
                     {
@@ -61,7 +71,10 @@ namespace TranslatorLib
                             OnTranslationAbsence(this.Dictionary, new TranslationAbsenceEventArgs(word, inputsNum--));
                             count++;
                         }
-                        resultLines[i] = resultLines[i].Replace(word, Dictionary[word]);
+                        if (isUpper)
+                            resultLines[i] = resultLines[i].Replace(word, textInfo.ToTitleCase(Dictionary[word]));
+                        else
+                            resultLines[i] = resultLines[i].Replace(word, Dictionary[word]);
                     }
                 }
             }
