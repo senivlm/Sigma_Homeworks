@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopLib.Products
 {
-    public interface IProduct
+    public interface IProduct : ICloneable
     {
         public string Name { get; set; }
 
