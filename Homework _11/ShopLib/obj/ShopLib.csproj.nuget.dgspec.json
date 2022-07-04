@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Иван\\source\\repos\\Homework _11\\ShopLib\\ShopLib.csproj": {}
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ShopLib\\ShopLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Иван\\source\\repos\\Homework _11\\ShopLib\\ShopLib.csproj": {
+    "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ShopLib\\ShopLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework _11\\ShopLib\\ShopLib.csproj",
+        "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ShopLib\\ShopLib.csproj",
         "projectName": "ShopLib",
-        "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework _11\\ShopLib\\ShopLib.csproj",
+        "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ShopLib\\ShopLib.csproj",
         "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework _11\\ShopLib\\obj\\",
+        "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ShopLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",

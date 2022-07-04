@@ -1,64 +1,72 @@
-﻿using System;
+﻿using ShopLib.Products;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ShopLib.Order
 {
-    public partial class Order : IEnumerable<ProductStock>, IList<ProductStock>
+    public partial class Order : IProductContainer<IProduct>
     {
-        #region IList
-        public ProductStock this[int index] { get => _products[index]; set =>_products[index] = value; }
+        #region IDictionary
+        public int this[IProduct key] { get => _productsStock[key]; set => _productsStock[key] = value; }
 
-        public int Count => _products.Count;
+        public ICollection<IProduct> Keys => _productsStock.Keys;
 
-        public bool IsReadOnly => throw new NotImplementedException();
+        public ICollection<int> Values => _productsStock.Values;
 
-        public void Add(ProductStock item)
+        public int Count => _productsStock.Count;
+
+        public bool IsReadOnly => ((ICollection<KeyValuePair<IProduct, int>>)_productsStock).IsReadOnly;
+
+        public void Add(IProduct key, int value)
         {
-            _products.Add(item);
+            _productsStock.Add(key, value);
+        }
+
+        public void Add(KeyValuePair<IProduct, int> item)
+        {
+            ((ICollection<KeyValuePair<IProduct, int>>)_productsStock).Add(item);
         }
 
         public void Clear()
         {
-            _products.Clear();
+            _productsStock.Clear();
         }
 
-        public bool Contains(ProductStock item)
+        public bool Contains(KeyValuePair<IProduct, int> item)
         {
-            return _products.Contains(item);
+            return ((ICollection<KeyValuePair<IProduct, int>>)_productsStock).Contains(item);
         }
 
-        public void CopyTo(ProductStock[] array, int arrayIndex)
+        public bool ContainsKey(IProduct key)
         {
-            _products.CopyTo(array, arrayIndex);
-        }
-        public int IndexOf(ProductStock item)
-        {
-            return _products.IndexOf(item);
+            return _productsStock.ContainsKey(key);
         }
 
-        public void Insert(int index, ProductStock item)
+        public void CopyTo(KeyValuePair<IProduct, int>[] array, int arrayIndex)
         {
-            _products.Insert(index, item);
+            ((ICollection<KeyValuePair<IProduct, int>>)_productsStock).CopyTo(array, arrayIndex);
         }
 
-        public bool Remove(ProductStock item)
+        public IEnumerator<KeyValuePair<IProduct, int>> GetEnumerator()
         {
-            return _products.Remove(item);
+            return ((IEnumerable<KeyValuePair<IProduct, int>>)_productsStock).GetEnumerator();
         }
 
-        public void RemoveAt(int index)
+        public bool Remove(IProduct key)
         {
-            _products.RemoveAt(index);
-        } 
-        #endregion
+            return _productsStock.Remove(key);
+        }
 
-        #region IEnumerable
-        public IEnumerator<ProductStock> GetEnumerator()
+        public bool Remove(KeyValuePair<IProduct, int> item)
         {
-            foreach (var item in _products)
-                yield return item;
+            return ((ICollection<KeyValuePair<IProduct, int>>)_productsStock).Remove(item);
+        }
+
+        public bool TryGetValue(IProduct key, out int value)
+        {
+            return _productsStock.TryGetValue(key, out value);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

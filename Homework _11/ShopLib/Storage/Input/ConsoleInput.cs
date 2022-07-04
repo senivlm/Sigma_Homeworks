@@ -11,7 +11,7 @@ namespace ShopLib.Storage.Input
         /// Extention method for manually initializing List<Product> in a Storage class via Console
         /// </summary>
         /// <param name="storage"></param>
-        public static void Initialize(this Storage storage)
+        public static void Initialize(this Storage<IProduct> storage)
         {
             bool run = CheckBeforeInit(storage);
 
@@ -22,7 +22,7 @@ namespace ShopLib.Storage.Input
             }
         }
 
-        public static void AddProducts(Storage storage)
+        public static void AddProducts(Storage<IProduct> storage)
         {
             int category;
             ChooseCategory(out category);
@@ -97,7 +97,7 @@ namespace ShopLib.Storage.Input
         /// </summary>
         /// <param name="storage"></param>
         /// <returns>true if YES, false if NO</returns>
-        private static bool CheckBeforeInit(Storage storage)
+        private static bool CheckBeforeInit(Storage<IProduct> storage)
         {
             bool result = false;
 
@@ -112,7 +112,7 @@ namespace ShopLib.Storage.Input
             return result;
         }
 
-        private static ProductStock CreateMeat()
+        private static Meat CreateMeat()
         {
             string name;
             decimal price;
@@ -185,12 +185,12 @@ namespace ShopLib.Storage.Input
                 };
             } while (!categoryIsValid);
 
-            var result = new ProductStock(new Meat(name, price, weightKg, quality, category), 0);
+            var result = new Meat(name, price, weightKg, quality, category);
 
             return result;
         }
 
-        private static ProductStock CreateDiary()
+        private static Diary CreateDiary()
         {
             string name;
             decimal price;
@@ -222,7 +222,7 @@ namespace ShopLib.Storage.Input
             } while (Enum.TryParse(Console.ReadLine(), out expirationDate));
 
 
-            var result = new ProductStock(new Diary(name, price, weightKg, expirationDate), 0);
+            var result = new Diary(name, price, weightKg, expirationDate);
 
             return result;
         }

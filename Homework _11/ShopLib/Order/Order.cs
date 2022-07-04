@@ -6,9 +6,9 @@ using System.Text;
 
 namespace ShopLib.Order
 {
-    public partial class Order : IEnumerable<ProductStock>, IList<ProductStock>
+    public partial class Order : IProductContainer<IProduct> 
     {
-        private List<ProductStock> _products;
+        private Dictionary<IProduct, int> _productsStock;
 
         #region Properties
         public decimal Price { get; set; }
@@ -18,11 +18,11 @@ namespace ShopLib.Order
 
         public void ChangePricesDueToExpiration()
         {
-            foreach (var stock in _products)
+            foreach (var stock in _productsStock)
             {
-                if (stock.Product is Diary)
+                if (stock.Key is Diary)
                 {
-                    ((Diary)stock.Product).ChangePriceDueToExpiration();
+                    ((Diary)stock.Key).ChangePriceDueToExpiration();
                 }
             }
         }

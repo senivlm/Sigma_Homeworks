@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework _11\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework _11\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework _11\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _11\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",

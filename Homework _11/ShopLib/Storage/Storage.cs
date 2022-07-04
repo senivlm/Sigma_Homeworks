@@ -6,80 +6,91 @@ using System.Text;
 
 namespace ShopLib.Storage
 {
-    public partial class Storage : IEnumerable<ProductStock>, IList<ProductStock>
+    public partial class Storage<T> : IProductContainer<T>
     {
-        private List<ProductStock> _products;
+        private Dictionary<T, int> _productsStock;
+
+        public event EventHandler<OnAddingExpiredEventArgs> OnAddingExpired;
 
         #region Constructors
         public Storage()
         {
-            _products = new List<ProductStock>();
+            _productsStock = new Dictionary<T, int>();
         }
 
         public Storage(int capacity)
         {
-            _products = new List<ProductStock>(capacity);
+            _productsStock = new Dictionary<T, int>(capacity);
         }
 
-        public Storage(Storage other)
+        public Storage(Storage<T> other)
         {
-            _products = new List<ProductStock>(other._products);
+            _productsStock = new Dictionary<T, int>(other);
         }
         #endregion
 
         #region Methods
         // a) Товари є в першому складі і немає в другому.
-        public Storage ExclusiveLeftJoin(Storage other)
+        public Storage<T> ExclusiveLeftJoin(Storage<T> other)
         {
-            Storage result = new Storage();
-            foreach (var stock in _products)
+            Storage<T> result = new Storage<T>();
+            foreach (var prod in _productsStock.Keys)
             {
-                if (!other._products.Contains(stock))
+                if (!other._productsStock.ContainsKey(prod))
                 {
-                    var newStock = new ProductStock((IProduct)stock.Product.Clone(), stock.Quantity);
-                    result.Add(newStock);
+                    result.Add((T)prod.Clone());
                 }
             }
             return result;
         }
 
         // b) Товари, які  є спільними в обох складах.
-        public Storage InnerJoin(Storage other)
+        public Storage<T> InnerJoin(Storage<T> other)
         {
-            Storage result = new Storage();
-            foreach (var stock in _products)
+            Storage<T> result = new Storage<T>();
+            foreach (var prod in _productsStock.Keys)
             {
-                if (other._products.Contains(stock))
+                if (other._productsStock.ContainsKey(prod))
                 {
-                    var newStock = new ProductStock((IProduct)stock.Product.Clone(), stock.Quantity);
-                    result.Add(newStock);
+                    result.Add((T)prod.Clone());
                 }
             }
             return result;
         }
 
         // c) Спільний список товарів, які є на обох складах, без повторів елементів.
-        public Storage FullJoinDistinct(Storage other)
+        public Storage<T> FullJoinDistinct(Storage<T> other)
         {
-            Storage result = new Storage();
-            foreach (var stock in this._products)
+            Storage<T> result = new Storage<T>();
+            foreach (var prod in this._productsStock.Keys)
             {
-                if (!result._products.Contains(stock))
+                if (!result._productsStock.ContainsKey(prod))
                 {
-                    var newStock = new ProductStock((IProduct)stock.Product.Clone(), stock.Quantity);
-                    result.Add(newStock);
+                    result.Add((T)prod.Clone());
                 }
             }
-            foreach (var stock in other._products)
+            foreach (var prod in other._productsStock.Keys)
             {
-                if (!result._products.Contains(stock))
+                if (!result._productsStock.ContainsKey(prod))
                 {
-                    var newStock = new ProductStock((IProduct)stock.Product.Clone(), stock.Quantity);
-                    result.Add(newStock);
+                    result.Add((T)prod.Clone());
                 }
             }
             return result;
-        } 
+        }
         #endregion
+    }
+
+    public class OnAddingExpiredEventArgs : EventArgs
+    {
+        public KeyValuePair<IExpirable, int> ProductStock { get; }
+        public OnAddingExpiredEventArgs(KeyValuePair<IExpirable, int> productStock)
+        {
+            ProductStock = productStock;
+        }
+        public OnAddingExpiredEventArgs(IExpirable product)
+        {
+            ProductStock = new KeyValuePair<IExpirable, int>(product, 0);
+        }
     }
 }

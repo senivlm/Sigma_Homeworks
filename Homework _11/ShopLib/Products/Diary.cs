@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopLib.Products
 {
-    public class Diary : IProduct
+    public class Diary : IProduct, IExpirable
     {
         #region Properties
         public string Name { get; set; }
