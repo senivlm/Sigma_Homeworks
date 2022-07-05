@@ -1,4 +1,5 @@
-﻿using ShopLib;
+﻿using RPNlib;
+using ShopLib;
 using ShopLib.Products;
 using ShopLib.Storage;
 using System;
@@ -29,6 +30,8 @@ namespace ConsoleUI
                 }
             }
 
+            // "4 + 7 + 12 / 3"
+            Console.WriteLine(RPN.EvaluatePostfix("4 7 + 12 3 / +"));
         }
 
         private static void Storage_OnAddingExpired(object? sender, OnAddingExpiredEventArgs e)

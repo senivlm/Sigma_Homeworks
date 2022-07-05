@@ -8,10 +8,16 @@
     ".NETCoreApp,Version=v6.0": {
       "ConsoleUI/1.0.0": {
         "dependencies": {
+          "RPNLib": "1.0.0",
           "ShopLib": "1.0.0"
         },
         "runtime": {
           "ConsoleUI.dll": {}
+        }
+      },
+      "RPNLib/1.0.0": {
+        "runtime": {
+          "RPNLib.dll": {}
         }
       },
       "ShopLib/1.0.0": {
@@ -23,6 +29,11 @@
   },
   "libraries": {
     "ConsoleUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RPNLib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "RPNLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RPNLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPNLib.dll": {}
+        }
+      },
       "ShopLib/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "RPNLib/1.0.0": {
+      "type": "project",
+      "path": "../RPN/RPNLib.csproj",
+      "msbuildProject": "../RPN/RPNLib.csproj"
+    },
     "ShopLib/1.0.0": {
       "type": "project",
       "path": "../ShopLib/ShopLib.csproj",
@@ -23,6 +38,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "RPNLib >= 1.0.0",
       "ShopLib >= 1.0.0"
     ]
   },
@@ -32,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _12\\ConsoleUI\\ConsoleUI.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Homework _12\\ConsoleUI\\ConsoleUI.csproj",
       "projectName": "ConsoleUI",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _12\\ConsoleUI\\ConsoleUI.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework _12\\ConsoleUI\\ConsoleUI.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _12\\ConsoleUI\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\Homework _12\\ConsoleUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +69,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _12\\ShopLib\\ShopLib.csproj": {
-              "projectPath": "C:\\Users\\Иван\\source\\repos\\Sigma_Homeworks\\Homework _12\\ShopLib\\ShopLib.csproj"
+            "C:\\Users\\Иван\\source\\repos\\Homework _12\\RPN\\RPNLib.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework _12\\RPN\\RPNLib.csproj"
+            },
+            "C:\\Users\\Иван\\source\\repos\\Homework _12\\ShopLib\\ShopLib.csproj": {
+              "projectPath": "C:\\Users\\Иван\\source\\repos\\Homework _12\\ShopLib\\ShopLib.csproj"
             }
           }
         }

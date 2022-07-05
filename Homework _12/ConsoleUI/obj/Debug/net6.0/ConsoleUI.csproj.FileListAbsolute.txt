@@ -52,3 +52,5 @@ C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _12\ConsoleUI\obj\Debug\
 C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _12\ConsoleUI\obj\Debug\net6.0\ConsoleUI.pdb
 C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _12\ConsoleUI\obj\Debug\net6.0\ConsoleUI.genruntimeconfig.cache
 C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _12\ConsoleUI\obj\Debug\net6.0\ref\ConsoleUI.dll
+C:\Users\Иван\source\repos\Homework _12\ConsoleUI\bin\Debug\net6.0\RPNLib.dll
+C:\Users\Иван\source\repos\Homework _12\ConsoleUI\bin\Debug\net6.0\RPNLib.pdb

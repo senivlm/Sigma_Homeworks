@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aPX2h7TLZ/U/n/yRHm0IXYqECXR9N0pi9UdyRs5riwzn6NSx3zFUEVy6sZNzfGiCri9TVe8E82N3JaURk4feIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Иван\\source\\repos\\Homework _12\\RPN\\RPNLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Иван\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Иван\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
