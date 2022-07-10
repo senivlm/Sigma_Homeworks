@@ -8,6 +8,43 @@ namespace ShopLib.Storage.Input
 {
     public static class FileInput
     {
+        public static bool ConvertToStorage(this Storage<IProduct> storage, List<string> lines)
+        {
+            bool allParsed = true;
+
+            foreach (var line in lines)
+            {
+                string[] data = line.Split(Config.FILE_SEPARATOR);
+                IProduct prod = null;
+                bool parsed = true;
+
+                switch (data[0])
+                {
+                    case "m":
+                        (prod, parsed) = CreateMeat(data);
+                        break;
+                    case "d":
+                        (prod, parsed) = CreateDiary(data);
+                        break;
+                    default:
+                        ShopLib.Storage.Logger.Logger.Log(line);
+                        // create bool to indicate not all lines were parsed
+                        allParsed = false;
+                        break;
+                }
+
+                // check if the current line has been parsed
+                if (!parsed)
+                {
+                    ShopLib.Storage.Logger.Logger.Log(line);
+                    allParsed = false;
+                }
+
+                if (prod != null)
+                    storage.Add(prod);
+            }
+            return allParsed;
+        }
         public static (Storage<IProduct>, bool) ConvertToStorage(this List<string> lines)
         {
             Storage<IProduct> storage = new Storage<IProduct>();

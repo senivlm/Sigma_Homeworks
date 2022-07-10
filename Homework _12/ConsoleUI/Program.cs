@@ -1,8 +1,10 @@
-﻿using RPNlib;
-using ShopLib;
+﻿using ShopLib;
 using ShopLib.Products;
 using ShopLib.Storage;
 using System;
+using ShopLib.Storage.Input;
+using RPNLib;
+using System.Globalization;
 
 namespace ConsoleUI
 {
@@ -13,6 +15,7 @@ namespace ConsoleUI
         {
             Storage<IProduct> storage = new Storage<IProduct>();
             storage.OnAddingExpired += Storage_OnAddingExpired;
+            storage.ConvertToStorage(new List<string>());
             storage.Add(new Diary("milk", 10, 10, DateTime.Now.AddDays(-2)), 0);
             storage.Add(new Meat(), 30);
 
@@ -30,8 +33,20 @@ namespace ConsoleUI
                 }
             }
 
-            // "4 + 7 + 12 / 3"
-            Console.WriteLine(RPN.EvaluatePostfix("4 7 + 12 3 / +"));
+            string postfix;
+            RPNLib.Config.DecimalSeparator = "."; //CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+
+            //// "4 + 7 + 12 / 3"
+            //// "4 7 + 12 3 / +"
+            postfix = Infix.GetPostfixString("4.5+7 +12  /3");
+            Console.WriteLine(postfix);
+            Console.WriteLine(Postfix.Evaluate(postfix));
+
+            RPNLib.Config.DecimalSeparator = ",";
+            // 1 + cos ( 1 / 2 ) + sin ( 1 / 2 )
+            postfix = Infix.GetPostfixString($"cos({Math.PI}) + sin         (        {Math.PI})");
+            Console.WriteLine(postfix);
+            Console.WriteLine(Postfix.Evaluate(postfix));
         }
 
         private static void Storage_OnAddingExpired(object? sender, OnAddingExpiredEventArgs e)

@@ -1,0 +1,10 @@
+C:\Users\Иван\source\repos\Homework _12\RPN\bin\Debug\netstandard2.1\RPNLib.deps.json
+C:\Users\Иван\source\repos\Homework _12\RPN\bin\Debug\netstandard2.1\RPNLib.dll
+C:\Users\Иван\source\repos\Homework _12\RPN\bin\Debug\netstandard2.1\RPNLib.pdb
+C:\Users\Иван\source\repos\Homework _12\RPN\obj\Debug\netstandard2.1\RPNLib.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework _12\RPN\obj\Debug\netstandard2.1\RPNLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Homework _12\RPN\obj\Debug\netstandard2.1\RPNLib.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Homework _12\RPN\obj\Debug\netstandard2.1\RPNLib.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Homework _12\RPN\obj\Debug\netstandard2.1\RPNLib.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework _12\RPN\obj\Debug\netstandard2.1\RPNLib.dll
+C:\Users\Иван\source\repos\Homework _12\RPN\obj\Debug\netstandard2.1\RPNLib.pdb
