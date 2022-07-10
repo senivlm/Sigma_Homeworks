@@ -23,7 +23,7 @@ namespace RPNLib
 
                 if (Token.IsNumber(currentToken))
                 {
-                    resultStack.Push(double.Parse(currentToken,Config.FormatInfo));
+                    resultStack.Push(double.Parse(currentToken, Config.FormatInfo));
                     continue;
                 }
 
