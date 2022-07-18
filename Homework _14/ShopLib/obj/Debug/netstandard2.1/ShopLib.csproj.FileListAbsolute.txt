@@ -1,0 +1,40 @@
+C:\Users\Иван\source\repos\Homework _12\ShopLib\bin\Debug\netstandard2.1\ShopLib.deps.json
+C:\Users\Иван\source\repos\Homework _12\ShopLib\bin\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Homework _12\ShopLib\bin\Debug\netstandard2.1\ShopLib.pdb
+C:\Users\Иван\source\repos\Homework _12\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework _12\ShopLib\obj\Debug\netstandard2.1\ShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Homework _12\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Homework _12\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Homework _12\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework _12\ShopLib\obj\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Homework _12\ShopLib\obj\Debug\netstandard2.1\ShopLib.pdb
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\obj\Debug\netstandard2.1\ShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\obj\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\obj\Debug\netstandard2.1\ShopLib.pdb
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\bin\Debug\netstandard2.1\ShopLib.deps.json
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\bin\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Homework _12 - no ProductStock\ShopLib\bin\Debug\netstandard2.1\ShopLib.pdb
+C:\Users\Иван\source\repos\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.pdb
+C:\Users\Иван\source\repos\Homework _14\ShopLib\bin\Debug\netstandard2.1\ShopLib.deps.json
+C:\Users\Иван\source\repos\Homework _14\ShopLib\bin\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Homework _14\ShopLib\bin\Debug\netstandard2.1\ShopLib.pdb
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\bin\Debug\netstandard2.1\ShopLib.deps.json
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\bin\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\bin\Debug\netstandard2.1\ShopLib.pdb
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.AssemblyInfo.cs
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.dll
+C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ShopLib\obj\Debug\netstandard2.1\ShopLib.pdb
