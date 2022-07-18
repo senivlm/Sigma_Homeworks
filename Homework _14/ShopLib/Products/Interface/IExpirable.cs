@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShopLib.Products
+namespace ShopLib.Products.Interface
 {
     public interface IExpirable : IProduct
     {

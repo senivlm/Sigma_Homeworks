@@ -10,7 +10,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            #region Task2
+            #region Task 2
             string jsonFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ConsoleUI\storage_1.json";
             string xmlFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ConsoleUI\storage_1.xml";
             string datFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ConsoleUI\storage_1.dat";
@@ -43,10 +43,17 @@ namespace ConsoleUI
             meatStorage.Add(meat2);
             var binaryStorage = binaryserializer.Deserialize(datFile);
 
+            
+            #endregion
+
+            #region Task 3
             // singleton працює 
             Console.WriteLine(meatStorage.Equals(jsonStorage)); // true
             Console.WriteLine(meatStorage.Equals(xmlStorage)); // true
             Console.WriteLine(meatStorage.Equals(binaryStorage)); // true 
+
+            // не зрозуміло на якому рівні абстракції зробити абстрактну фабрику
+            // діаграма класів додана до папки завдання 
             #endregion
         }
 

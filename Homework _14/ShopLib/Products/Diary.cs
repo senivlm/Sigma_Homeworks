@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopLib.Products.Interface;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;

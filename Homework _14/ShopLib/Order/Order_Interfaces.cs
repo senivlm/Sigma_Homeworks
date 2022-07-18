@@ -1,4 +1,5 @@
 ﻿using ShopLib.Products;
+using ShopLib.Products.Interface;
 using System;
 using System.Collections;
 using System.Collections.Generic;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace ShopLib.Products
+namespace ShopLib.Products.Interface
 {
     public interface IProduct : ICloneable, ISerializable
     {
