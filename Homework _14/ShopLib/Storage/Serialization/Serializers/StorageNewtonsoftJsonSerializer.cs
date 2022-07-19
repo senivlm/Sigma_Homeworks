@@ -11,14 +11,14 @@ namespace ShopLib.Storage.Serialization.Serializers
 {
     public class StorageNewtonsoftJsonSerializer<T> : IStorageSerializer<T> where T : IProduct
     {   
-        public void Serialize(IStorage<T> storage, string jsonPath)
+        public void Serialize(IStorage<T> storage, string filePath)
         {
-            using (StreamWriter jsonStream = File.CreateText(jsonPath))
+            using (StreamWriter sw = File.CreateText(filePath))
             {
-                var jss = new Newtonsoft.Json.JsonSerializer();
+                var serializer = new Newtonsoft.Json.JsonSerializer();
                 try
                 {
-                    jss.Serialize(jsonStream, storage);
+                    serializer.Serialize(sw, storage);
                 }
                 catch (Exception)
                 {
@@ -31,15 +31,9 @@ namespace ShopLib.Storage.Serialization.Serializers
         {
             string text = File.ReadAllText(filePath);
 
-            var storage = Storage<T>.GetInstance();
             try
             {
-                //storage = JsonConvert.DeserializeObject<Storage<T>>(text, new JsonSerializerSettings
-                //{
-                //    ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
-                //});
-
-                storage = JsonConvert.DeserializeObject<Storage<T>>(text);
+                JsonConvert.DeserializeObject<Storage<T>>(text);
             }
             catch (Exception)
             {

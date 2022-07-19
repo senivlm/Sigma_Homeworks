@@ -32,13 +32,11 @@ namespace ShopLib.Storage.Serialization.Serializers
         {
             using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate))
             {
-                BinaryFormatter formatter = new BinaryFormatter();
-
-                var storage = Storage<T>.GetInstance();
+                BinaryFormatter serializer = new BinaryFormatter();
 
                 try
                 {
-                    storage = (Storage<T>)formatter.Deserialize(fs);
+                    serializer.Deserialize(fs);
                 }
                 catch (Exception)
                 {

@@ -22,27 +22,27 @@ namespace ShopLib.Storage
         {
         }
 
-        // ?????????????????
-        internal Storage(SerializationInfo info, StreamingContext context)
+        private Storage(SerializationInfo info, StreamingContext context)
         {
             // створює новий об'єкт, але долучається до сінглтона
             // singleton працює
+            
             _instance._products = (List<T>)info.GetValue("Products", typeof(List<T>));
 
             // створює новий об'єкт
             // singleton не працює
+            // тому у серіалізаторах завжди повертається Storage<T>.Instance
+
             //_products = (List<T>)info.GetValue("Products", typeof(List<T>));
         }
 
         [JsonConstructor]
-        internal Storage(List<T> products)
+        private Storage(List<T> products)
         {
             _instance._products = products;
         }
 
-        //public static Storage<T> Instance => GetInstance();
-        // ??????????????????????????
-        public static Storage<T> Instance { get => GetInstance(); internal set => _instance = value; }
+        public static Storage<T> Instance => GetInstance();
 
         public static Storage<T> GetInstance()
         {
@@ -76,6 +76,13 @@ namespace ShopLib.Storage
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         #endregion
 
+        #region ISerializable
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Products", _products);
+        } 
+        #endregion
+
         #region Private Methods
         private void CheckIfExpired(T item)
         {
@@ -86,13 +93,7 @@ namespace ShopLib.Storage
                     OnAddingExpired(this, new OnAddingExpiredEventArgs(prod));
             }
         }
-
-        
         #endregion
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("Products", _products);
-            //throw new NotImplementedException();
-        }
+        
     }
 }

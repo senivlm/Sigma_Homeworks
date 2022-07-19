@@ -17,6 +17,9 @@ namespace ShopLib.Storage.Serialization
 
         public IStorageSerializer<T> CreateInstance<T>(string description) where T : IProduct
         {
+            if(description == null)
+                throw new ArgumentNullException("description");
+
             description = GetCompilationTypeName(description);
             Type typeToCreate = GetTypeToCreate(description);
             

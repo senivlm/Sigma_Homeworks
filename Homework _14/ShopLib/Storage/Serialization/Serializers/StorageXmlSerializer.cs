@@ -14,12 +14,12 @@ namespace ShopLib.Storage.Serialization.Serializers
         public void Serialize(IStorage<T> storage, string filePath)
         {
             XmlSerializer xs = new XmlSerializer(typeof(Storage<T>));
-            using (StreamWriter stream = File.CreateText(filePath))
+            using (StreamWriter sw = File.CreateText(filePath))
             {
 
                 try
                 {
-                    xs.Serialize(stream, storage);
+                    xs.Serialize(sw, storage);
                 }
                 catch (Exception)
                 {
@@ -30,14 +30,13 @@ namespace ShopLib.Storage.Serialization.Serializers
         }
         public Storage<T> Deserialize(string filePath)
         {
-            using (FileStream stream = File.Open(filePath, FileMode.OpenOrCreate))
+            using (FileStream fs = File.Open(filePath, FileMode.OpenOrCreate))
             {
-                XmlSerializer xs = new XmlSerializer(typeof(Storage<T>));
-                var storage = Storage<T>.Instance;
+                XmlSerializer serializer = new XmlSerializer(typeof(Storage<T>));
 
                 try
                 {
-                    storage = (Storage<T>)xs.Deserialize(stream);
+                    serializer.Deserialize(fs);
                 }
                 catch (Exception)
                 {
@@ -47,6 +46,6 @@ namespace ShopLib.Storage.Serialization.Serializers
                 return Storage<T>.Instance;
             }
         }
-        
+
     }
 }
