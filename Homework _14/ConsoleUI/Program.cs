@@ -7,9 +7,10 @@ using System;
 namespace ConsoleUI
 {
     internal class Program
-    {
+    {// Сподобався загалом варіант Критики чистого розуму. Пропоную обговорити на занятті. Але в діаграмі Ви зупинились на  реалізації тільки невеликої частини, а саме товарів. А де вся інша частина хоча б концептуально?
+        //І не вже не буде паттернів?
         static void Main(string[] args)
-        {
+        {// А чому все це щастя в main?
             #region Task 2
             string jsonFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ConsoleUI\storage_1.json";
             string xmlFile = @"C:\Users\Иван\source\repos\Sigma_Homeworks\Homework _14\ConsoleUI\storage_1.xml";
